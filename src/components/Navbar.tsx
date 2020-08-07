@@ -13,6 +13,7 @@ const LogoSection = styled('div')`
   display: inline-block;
   height: 100%;
   h3 {
+    font-size: 1.7rem;
     color: white;
   }
   h3 span {

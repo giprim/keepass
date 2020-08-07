@@ -8,6 +8,8 @@ const StyledBanner = styled('div')`
   grid-template-columns: 2fr 3fr;
   grid-gap: 10px;
   align-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
 `;
 
 const BannerWriteUp = styled('div')`
