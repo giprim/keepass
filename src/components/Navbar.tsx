@@ -4,7 +4,9 @@ import { NavLink } from 'react-router-dom';
 
 const StyledNav = styled('div')`
   display: flex;
+  height: 80px;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
 `;
 
 const LogoSection = styled('div')`
@@ -28,17 +30,24 @@ const LinkSection = styled('ul')`
     margin-left: 10px;
     font-weight: 600;
     border-radius: 4px;
+    padding: 10px 0px;
+    transition: 0.23s ease-out;
+    :hover {
+      border: 1px #840084 solid;
+    }
 
     a {
       text-decoration: none;
       color: white;
       font-size: 0.9rem;
-      padding: 10px 5px;
+      padding: 10px 15px;
     }
 
     :last-child {
-      background: purple;
-      padding: 10px 15px;
+      background: #840084;
+      :hover {
+        background: #84008499;
+      }
     }
   }
 `;
