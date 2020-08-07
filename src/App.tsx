@@ -5,6 +5,14 @@ import Container from './components/Container';
 import Banner from './components/Banner';
 import IconTitleText from './components/IconTitleText';
 import FlexContainer from './components/FlexContainer';
+import styled from '@emotion/styled';
+import background from './assets/background.svg';
+
+const StyledBannerWrapper = styled('div')`
+  background: url(${background}) no-repeat;
+  background-size: 100%;
+  background-position: top left;
+`;
 
 const lorem = `
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, architecto sequi consequuntur, rem temporibus, corporis laboriosam ab id eaque dolorum recusandae labore delectus. Ullam accusamus praesentium, non fugit voluptas sint?`;
@@ -12,12 +20,12 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, architecto seq
 function App() {
   return (
     <div>
-      <div style={{ background: 'black' }}>
+      <StyledBannerWrapper>
         <Container>
           <Navbar />
           <Banner />
         </Container>
-      </div>
+      </StyledBannerWrapper>
 
       <div>
         <Container>
