@@ -8,7 +8,7 @@ interface IIconTitleText {
 }
 
 const Styledbox = styled('div')`
-  width: 340px;
+  width: 390px;
   margin-bottom: 1.5rem;
 `;
 

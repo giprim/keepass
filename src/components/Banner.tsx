@@ -6,7 +6,7 @@ import FlexContainer from './FlexContainer';
 const StyledBanner = styled('div')`
   display: grid;
   grid-template-columns: 2fr 3fr;
-  grid-gap: 10px;
+  grid-gap: 14%;
   align-content: space-between;
   padding-top: 2rem;
   padding-bottom: 6rem;
