@@ -4,23 +4,14 @@ import ButtonComp from './ButtonComp';
 import FlexContainer from './FlexContainer';
 
 const StyledBanner = styled('div')`
-  /* display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-gap: 14%;
-  align-content: space-between;
-  padding-top: 2rem;
-  padding-bottom: 6rem;
-
-  @media (max-width: 834px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr;
-  } */
-
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-between;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
   padding-top: 2rem;
+  @media (min-width: 834px) {
+    padding-bottom: 10rem;
+  }
 `;
 
 const BannerWriteUp = styled('div')`
@@ -28,17 +19,31 @@ const BannerWriteUp = styled('div')`
   color: white;
   h2 {
     padding: 5px 0;
-    font-size: 2.5em;
+    font-size: 1.9em;
+    margin-bottom: 5%;
+    margin-top: 20px;
   }
   p {
-    padding-bottom: 20px;
-    font-size: 1.4em;
+    padding-bottom: 15px;
+    font-size: 1.1em;
+    color: #aaa;
+  }
+
+  @media (min-width: 834px) {
+    width: 50%;
+    h2 {
+      margin-top: 0;
+      font-size: 2.5em;
+    }
+    p {
+      font-size: 1.4em;
+    }
   }
 `;
 const BannerImage = styled('div')`
-  max-width: 100%;
+  max-width: 600px;
   img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 `;

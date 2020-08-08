@@ -13,6 +13,9 @@ const StyledNav = styled('div')`
   div {
     height: 100%;
   }
+  a {
+    text-decoration: none;
+  }
 `;
 
 const Logo = styled('h3')`

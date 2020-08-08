@@ -16,7 +16,7 @@ const StyledIcon = styled('div')`
   padding-bottom: 1rem;
 `;
 const StyledTitle = styled('h3')`
-  padding-bottom: 1rem 0;
+  padding-bottom: 1rem;
   font-size: 1.4rem;
 `;
 

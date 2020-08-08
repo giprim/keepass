@@ -22,6 +22,12 @@ const StyledButton = styled.button<IButton>`
     background: ${({ backgroundProps }) =>
       backgroundProps ? `${backgroundProps}99` : '#99999955'};
   }
+
+  @media (max-width: 420px) {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
 `;
 
 const ButtonComp: React.FC<IButton> = ({
