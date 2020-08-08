@@ -4,12 +4,23 @@ import ButtonComp from './ButtonComp';
 import FlexContainer from './FlexContainer';
 
 const StyledBanner = styled('div')`
-  display: grid;
+  /* display: grid;
   grid-template-columns: 2fr 3fr;
   grid-gap: 14%;
   align-content: space-between;
   padding-top: 2rem;
   padding-bottom: 6rem;
+
+  @media (max-width: 834px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+  } */
+
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  padding-bottom: 6rem;
+  padding-top: 2rem;
 `;
 
 const BannerWriteUp = styled('div')`
@@ -25,6 +36,7 @@ const BannerWriteUp = styled('div')`
   }
 `;
 const BannerImage = styled('div')`
+  max-width: 100%;
   img {
     width: 100%;
     height: auto;

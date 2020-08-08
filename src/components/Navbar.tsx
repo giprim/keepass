@@ -1,67 +1,113 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
+import { Menu } from 'react-feather';
 
 const StyledNav = styled('div')`
+  font-size: 1rem;
   display: flex;
-  height: 80px;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 1.5rem;
+  vertical-align: middle;
+  div {
+    height: 100%;
+  }
 `;
 
-const LogoSection = styled('div')`
-  display: inline-block;
-  height: 100%;
-  h3 {
-    font-size: 1.7rem;
-    color: white;
-  }
-  h3 span {
+const Logo = styled('h3')`
+  font-size: 1.2em;
+  padding: 15px 0;
+  color: white;
+  span {
     color: purple;
   }
 `;
 
-const LinkSection = styled('ul')`
-  display: inline-flex;
+const LinkSection = styled('ul')<any>`
+  display: ${(props) => (props.show ? 'block' : 'none')};
+  width: 100%;
+  margin-top: 15px;
+  transition: 0.23s linear;
 
   li {
     list-style: none;
-    text-transform: uppercase;
-    margin: 2px;
-    margin-left: 10px;
-    font-weight: 600;
-    border-radius: 4px;
-    padding: 10px 0px;
-    transition: 0.23s ease-out;
-    :hover {
-      border: 1px #840084 solid;
-    }
-
     a {
-      text-decoration: none;
-      color: white;
-      font-size: 0.9rem;
-      padding: 10px 15px;
-    }
-
-    :last-child {
       background: #840084;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      padding: 10px 5px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: 0.23s ease-out;
       :hover {
-        background: #84008499;
+        background: #520052;
+      }
+    }
+    :last-child {
+      a {
+        background: #ffffff;
+        color: #840084;
+        :hover {
+          background: #ffffff99;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 834px) {
+    display: inline-flex;
+    width: auto;
+    margin-top: 8px;
+    li {
+      a {
+        background: #ffffff00;
+        padding: 10px 15px;
+        border-radius: 4px;
+        margin: 0 3px;
+        :hover {
+          background: #840084;
+        }
       }
     }
   }
 `;
 
+const MenuButton = styled('button')`
+  display: none;
+  border: none;
+  border: 1px #ffffff55 solid;
+  border-radius: 4px;
+  background: #ffffff00;
+  color: white;
+  font-size: 1.1em;
+  padding: 5px 15px;
+  line-height: 100%;
+  transition: 0.23s ease-out;
+  @media (max-width: 834px) {
+    display: inline;
+    :hover {
+      background: #ffffffaa;
+    }
+  }
+`;
+
 const Navbar = () => {
+  const [visible, setVisible] = useState(false);
   return (
     <StyledNav>
-      <LogoSection>
-        <h3>
+      <NavLink to='/'>
+        <Logo>
           Kee<span>pass</span>
-        </h3>
-      </LogoSection>
-      <LinkSection>
+        </Logo>
+      </NavLink>
+
+      <MenuButton onClick={() => setVisible((prev) => !prev)}>
+        <Menu />
+      </MenuButton>
+      <LinkSection show={visible}>
         <li>
           <NavLink to='/tour'>tour</NavLink>
         </li>

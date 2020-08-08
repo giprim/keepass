@@ -13,6 +13,7 @@ const StyledButton = styled.button<IButton>`
   border: ${(props) => (props.borderProps ? '1px #999999 solid' : 'none')};
   color: white;
   font-weight: 600;
+  margin-top: 1rem;
   border-radius: 4px;
   margin-right: 1rem;
   text-transform: uppercase;
