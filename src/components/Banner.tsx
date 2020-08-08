@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import ButtonComp from './ButtonComp';
 import FlexContainer from './FlexContainer';
+import ButtonLink from './link/ButtonLink';
 
 const StyledBanner = styled('div')`
   display: flex;
@@ -59,10 +60,11 @@ const Banner: React.FC = () => {
         </p>
 
         <FlexContainer>
-          <ButtonComp
+          <ButtonLink
             backgroundProps='#840084'
             borderProps={false}
             text='try for free'
+            url='signin'
           />
           <ButtonComp borderProps={true} text='How it works' />
         </FlexContainer>

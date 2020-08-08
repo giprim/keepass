@@ -1,19 +1,23 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import styled from '@emotion/styled';
 
-interface IButton extends React.HTMLAttributes<HTMLButtonElement> {
+interface IButtonLink {
   backgroundProps?: string;
   borderProps?: boolean;
   text?: string;
+  url?: string;
 }
-const StyledButton = styled('button')<IButton>`
+
+const StyledLink = styled(Link)<IButtonLink>`
   padding: 1rem 3rem;
   background: ${(props) =>
     props.backgroundProps ? props.backgroundProps : '#99999900'};
   border: ${(props) => (props.borderProps ? '1px #999999 solid' : 'none')};
   color: white;
   font-weight: 600;
+  text-align: center;
+  text-decoration: none;
   margin-top: 1rem;
   border-radius: 4px;
   margin-right: 1rem;
@@ -31,16 +35,20 @@ const StyledButton = styled('button')<IButton>`
   }
 `;
 
-const ButtonComp: React.FC<IButton> = ({
-  text,
+const ButtonLink: React.FC<IButtonLink> = ({
   backgroundProps,
   borderProps,
+  text,
+  url,
 }) => {
   return (
-    <StyledButton backgroundProps={backgroundProps} borderProps={borderProps}>
+    <StyledLink
+      to={`/${url}`}
+      backgroundProps={backgroundProps}
+      borderProps={borderProps}>
       {text}
-    </StyledButton>
+    </StyledLink>
   );
 };
 
-export default ButtonComp;
+export default ButtonLink;
