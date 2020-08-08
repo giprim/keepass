@@ -13,7 +13,16 @@ const Styledbox = styled('div')`
 `;
 
 const StyledIcon = styled('div')`
+  padding-top: 1rem;
   padding-bottom: 1rem;
+  svg {
+    width: 45px;
+    height: 45px;
+    @media (min-width: 834px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
 `;
 const StyledTitle = styled('h3')`
   padding-bottom: 1rem;

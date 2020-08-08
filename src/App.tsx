@@ -7,8 +7,7 @@ import IconTitleText from './components/IconTitleText';
 import FlexContainer from './components/FlexContainer';
 import styled from '@emotion/styled';
 import background from './assets/background.svg';
-import mobileBackground from './assets/mobileBackground.svg';
-import tabBackground from './assets/tabBackground.svg';
+import { Calendar, Camera, Archive, Image, Music, Save } from 'react-feather';
 
 const StyledBannerWrapper = styled('div')`
   background: linear-gradient(
@@ -64,32 +63,32 @@ function App() {
         <Container>
           <FlexContainer justify='space-between'>
             <IconTitleText
-              icon={<img src='' />}
+              icon={<Camera color='red' />}
               text={lorem}
               title={'Lorem ipsum dolor sit'}
             />
             <IconTitleText
-              icon={<img src='' />}
+              icon={<Calendar color='orange' />}
               text={lorem}
               title={'Lorem ipsum dolor sit'}
             />
             <IconTitleText
-              icon={<img src='' />}
+              icon={<Image color='green' />}
               text={lorem}
               title={'Lorem ipsum dolor sit'}
             />
             <IconTitleText
-              icon={<img src='' />}
+              icon={<Archive color='purple' />}
               text={lorem}
               title={'Lorem ipsum dolor sit'}
             />
             <IconTitleText
-              icon={<img src='' />}
+              icon={<Music color='blue' />}
               text={lorem}
               title={'Lorem ipsum dolor sit'}
             />
             <IconTitleText
-              icon={<img src='' />}
+              icon={<Save color='brown' />}
               text={lorem}
               title={'Lorem ipsum dolor sit'}
             />

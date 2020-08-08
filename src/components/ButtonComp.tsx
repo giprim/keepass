@@ -6,7 +6,7 @@ interface IButton extends React.HTMLAttributes<HTMLButtonElement> {
   borderProps?: boolean;
   text?: string;
 }
-const StyledButton = styled.button<IButton>`
+const StyledButton = styled('button')<IButton>`
   padding: 1rem 3rem;
   background: ${(props) =>
     props.backgroundProps ? props.backgroundProps : '#99999900'};

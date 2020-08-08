@@ -86,6 +86,7 @@ const MenuButton = styled('button')`
   background: #ffffff00;
   color: white;
   font-size: 1.1em;
+  margin-top: 10px;
   padding: 5px 15px;
   line-height: 100%;
   transition: 0.23s ease-out;
