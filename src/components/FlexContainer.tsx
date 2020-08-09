@@ -15,6 +15,7 @@ const StyledFlex = styled('div')<IFlex>`
   display: flex;
   justify-content: ${({ justify }) => justify || 'start'};
   flex-wrap: wrap;
+  align-items: center;
 `;
 
 const FlexContainer: React.FC<IFlex> = ({ children, justify }) => {
