@@ -14,6 +14,7 @@ const StyledPriceCard = styled('div')<IStyledCard>`
   color: #555;
   padding: 10px;
   margin: 2px;
+  margin-top: 1rem;
   border-radius: 5px;
   text-align: center;
   box-shadow: 0px 3px 10px #88888844;
@@ -39,6 +40,11 @@ const StyledPriceCard = styled('div')<IStyledCard>`
     border-radius: 5px;
   }
 
+  h3 {
+    font-size: 1.6em;
+    font-weight: bold;
+  }
+
   ul {
     list-style: none;
     margin: 3rem 0;
@@ -56,14 +62,16 @@ interface IPriceCard {
   recommended?: boolean;
   planType: string;
   price: number;
-  package?: string[];
+  planPackage?: string[];
+  url?: string;
 }
 
 const PriceCard: React.FC<IPriceCard> = ({
   recommended,
   planType,
   price,
-  package: planPackage,
+  url,
+  planPackage,
 }) => {
   return (
     <StyledPriceCard recommend={recommended}>
@@ -91,7 +99,7 @@ const PriceCard: React.FC<IPriceCard> = ({
         <ButtonLink
           backgroundProps='#263854'
           text='7 days free trial'
-          url='/'
+          url={url || ''}
         />
       </FlexContainer>
     </StyledPriceCard>

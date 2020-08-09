@@ -3,22 +3,15 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Container from './components/Container';
 import Banner from './components/Banner';
-import Tour from './components/Tour';
+import Tour from './components/TourSection';
 import {
   StyledBannerWrapper,
   SectionBackground,
+  StyledInput,
   PaddedContainer,
 } from './styles/styled';
-import Security from './components/Security';
-import PriceCard from './components/PriceCard';
-import FlexContainer from './components/FlexContainer';
-
-const plan = [
-  '10 Software listing',
-  '10 Software listing',
-  '10 Software listing',
-  '10 Software listing',
-];
+import Security from './components/SecuritySection';
+import Price from './components/PriceSection';
 
 function App() {
   return (
@@ -36,17 +29,15 @@ function App() {
         <Security />
       </SectionBackground>
 
-      {/* Pricing section */}
       <SectionBackground>
-        <Container>
-          <PaddedContainer>
-            <FlexContainer justify='center'>
-              <PriceCard price={250} planType='Personal' package={plan} />
-              <PriceCard price={250} planType='Family' recommended={true} />
-              <PriceCard price={250} planType='Premium' />
-            </FlexContainer>
-          </PaddedContainer>
-        </Container>
+        <Price />
+      </SectionBackground>
+      <SectionBackground>
+        <PaddedContainer>
+          <Container>
+            <StyledInput placeholder='emailaddress@gmail.com' />
+          </Container>
+        </PaddedContainer>
       </SectionBackground>
     </div>
   );

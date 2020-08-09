@@ -64,3 +64,9 @@ export const StyledImage = styled('img')<any>`
 export const StyledWidth = styled('div')<any>`
   max-width: ${(props) => props.width || '100%'};
 `;
+
+export const StyledInput = styled('input')`
+  border: none;
+  border-bottom: 1px #520052 solid;
+  padding: 0 10px;
+`;

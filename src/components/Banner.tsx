@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import ButtonComp from './ButtonComp';
 import FlexContainer from './FlexContainer';
 import ButtonLink from './link/ButtonLink';
+import bannerImg from '../assets/bannerImg.svg';
 
 const StyledBanner = styled('div')`
   display: flex;
@@ -17,6 +18,7 @@ const StyledBanner = styled('div')`
 
 const BannerWriteUp = styled('div')`
   display: inline-block;
+  max-width: 450px;
   color: white;
   h2 {
     padding: 5px 0;
@@ -42,7 +44,7 @@ const BannerWriteUp = styled('div')`
   }
 `;
 const BannerImage = styled('div')`
-  max-width: 600px;
+  max-width: 700px;
   img {
     max-width: 100%;
     height: auto;
@@ -70,10 +72,7 @@ const Banner: React.FC = () => {
         </FlexContainer>
       </BannerWriteUp>
       <BannerImage>
-        <img
-          src='https://images.unsplash.com/photo-1534279006878-88c603b2ce78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80'
-          alt=''
-        />
+        <img src={bannerImg} alt='' />
       </BannerImage>
     </StyledBanner>
   );
