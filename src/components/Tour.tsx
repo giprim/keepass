@@ -10,7 +10,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, architecto seq
 
 const Tour = () => {
   return (
-    <PaddedContainer>
+    <PaddedContainer id='tour'>
       <Container>
         <FlexContainer justify='space-between'>
           <IconTitleText

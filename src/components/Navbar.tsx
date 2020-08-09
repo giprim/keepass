@@ -113,22 +113,22 @@ const Navbar = () => {
       </MenuButton>
       <LinkSection show={visible}>
         <li>
-          <NavLink to='/tour'>tour</NavLink>
+          <a href='#tour'>tour</a>
         </li>
         <li>
-          <NavLink to='/security'> security</NavLink>
+          <a href='#security'> security</a>
         </li>
         <li>
-          <NavLink to='/pricing'>pricing</NavLink>
+          <a href='#pricing'>pricing</a>
         </li>
         <li>
-          <NavLink to='/support'>support</NavLink>
+          <a href='#support'>support</a>
         </li>
         <li>
-          <NavLink to='/signin'>sign in</NavLink>
+          <a href='#signin'>sign in</a>
         </li>
         <li>
-          <NavLink to='/signin'>try for free</NavLink>
+          <a href='#signin'>try for free</a>
         </li>
       </LinkSection>
     </StyledNav>

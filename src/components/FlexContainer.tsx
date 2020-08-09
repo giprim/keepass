@@ -8,7 +8,8 @@ interface IFlex {
     | 'space-between'
     | 'space-evenly'
     | 'space-around'
-    | 'flex-end';
+    | 'flex-end'
+    | 'center';
 }
 
 const StyledFlex = styled('div')<IFlex>`
