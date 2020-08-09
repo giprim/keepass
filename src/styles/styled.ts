@@ -67,6 +67,7 @@ export const StyledWidth = styled('div')<any>`
 
 export const StyledInput = styled('input')`
   border: none;
+  font-size: 1.1rem;
   border-bottom: 1px #520052 solid;
-  padding: 0 10px;
+  padding: 15px 20px;
 `;
