@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
 
 interface IButton extends React.HTMLAttributes<HTMLButtonElement> {
   backgroundProps?: string;
