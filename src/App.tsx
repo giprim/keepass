@@ -12,10 +12,11 @@ import {
 import Security from './components/SecuritySection';
 import Price from './components/PriceSection';
 import SupportSection from './components/SupportSection';
+import FooterSection from './components/FooterSection';
 
 function App() {
   return (
-    <div>
+    <>
       <StyledBannerWrapper>
         <Container>
           <Navbar />
@@ -28,21 +29,16 @@ function App() {
       <SectionBackground color='#eee'>
         <Security />
       </SectionBackground>
-
       <SectionBackground>
         <Price />
       </SectionBackground>
-      {/* test input */}
       <SectionBackground color='#263854'>
         <SupportSection />
       </SectionBackground>
-      {/* footer */}
       <SectionBackground color='#19273e'>
-        <PaddedContainer padding='10px'>
-          <footer>developed by giprim</footer>
-        </PaddedContainer>
+        <FooterSection />
       </SectionBackground>
-    </div>
+    </>
   );
 }
 
