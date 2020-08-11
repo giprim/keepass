@@ -62,12 +62,43 @@ export const StyledImage = styled('img')<any>`
 `;
 
 export const StyledWidth = styled('div')<any>`
-  max-width: ${(props) => props.width || '100%'};
+  max-width: ${(props) => props.maxWidth || '100%'};
+  width: ${(props) => props.width || '100%'};
 `;
 
 export const StyledInput = styled('input')`
   border: none;
   font-size: 1.1rem;
-  border-bottom: 1px #520052 solid;
+  border-bottom: 1px #ffffff88 solid;
   padding: 15px 20px;
+  background: #ffffff00;
+  color: #fff;
+  transition: 0.53s ease-out;
+  width: 100%;
+
+  :hover,
+  :focus {
+    background: #ffffffff;
+    color: #444;
+    /* border-bottom: 3px #ffffffb8 solid; */
+  }
+`;
+
+export const StyledTextArea = styled('textarea')`
+  border: none;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px #ffffff88 solid;
+  padding: 15px 20px;
+  background: #00000000;
+  color: #fff;
+  transition: 0.53s ease-out;
+  width: 100%;
+  font-family: inherit;
+  :hover,
+  :focus {
+    color: #444;
+    background: #fff;
+    /* border-bottom: 3px #ffffffb8 solid; */
+  }
 `;

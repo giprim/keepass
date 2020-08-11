@@ -7,11 +7,11 @@ import Tour from './components/TourSection';
 import {
   StyledBannerWrapper,
   SectionBackground,
-  StyledInput,
   PaddedContainer,
 } from './styles/styled';
 import Security from './components/SecuritySection';
 import Price from './components/PriceSection';
+import SupportSection from './components/SupportSection';
 
 function App() {
   return (
@@ -32,11 +32,14 @@ function App() {
       <SectionBackground>
         <Price />
       </SectionBackground>
-      <SectionBackground>
-        <PaddedContainer>
-          <Container>
-            <StyledInput placeholder='emailaddress@gmail.com' />
-          </Container>
+      {/* test input */}
+      <SectionBackground color='#263854'>
+        <SupportSection />
+      </SectionBackground>
+      {/* footer */}
+      <SectionBackground color='#19273e'>
+        <PaddedContainer padding='10px'>
+          <footer>developed by giprim</footer>
         </PaddedContainer>
       </SectionBackground>
     </div>
