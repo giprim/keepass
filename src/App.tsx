@@ -4,11 +4,7 @@ import Navbar from './components/Navbar';
 import Container from './components/Container';
 import Banner from './components/Banner';
 import Tour from './components/TourSection';
-import {
-  StyledBannerWrapper,
-  SectionBackground,
-  PaddedContainer,
-} from './styles/styled';
+import { StyledBannerWrapper, SectionBackground } from './styles/styled';
 import Security from './components/SecuritySection';
 import Price from './components/PriceSection';
 import SupportSection from './components/SupportSection';
